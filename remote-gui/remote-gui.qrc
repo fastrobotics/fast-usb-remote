@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/new/remote-gui">
+        <file>add-profile.png</file>
+        <file>del-profile.png</file>
+        <file>fast-logo.png</file>
+        <file>new-profile.png</file>
+        <file>open-profile.png</file>
+        <file>save-profile.png</file>
+        <file>download-profile.png</file>
+        <file>upload-profile.png</file>
+    </qresource>
+</RCC>
