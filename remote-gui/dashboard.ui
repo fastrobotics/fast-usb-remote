@@ -27,42 +27,10 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="remote-gui.qrc">:/new/remote-gui/fast-logo.png</pixmap>
+     <pixmap resource="remote-gui.qrc">:/new/remote-gui/images/fast-logo.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="addprofile">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>20</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="remote-gui.qrc">:/new/remote-gui/add-profile.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QLabel" name="delprofile">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>20</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="remote-gui.qrc">:/new/remote-gui/del-profile.png</pixmap>
     </property>
    </widget>
    <widget class="QListWidget" name="proflist">
@@ -74,41 +42,9 @@
       <height>111</height>
      </rect>
     </property>
-    <item>
-     <property name="text">
-      <string>Profile 1</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Profile 2</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Profile 3</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Profile 4</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Profile 5</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Profile 6</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Profile 7</string>
-     </property>
-    </item>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::MultiSelection</enum>
+    </property>
    </widget>
    <widget class="QLabel" name="proflabel">
     <property name="geometry">
@@ -131,8 +67,8 @@
      <rect>
       <x>30</x>
       <y>250</y>
-      <width>46</width>
-      <height>13</height>
+      <width>61</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -192,9 +128,9 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>70</x>
+      <x>60</x>
       <y>420</y>
-      <width>21</width>
+      <width>31</width>
       <height>20</height>
      </rect>
     </property>
@@ -228,7 +164,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="remote-gui.qrc">:/new/remote-gui/open-profile.png</pixmap>
+     <pixmap resource="remote-gui.qrc">:/new/remote-gui/images/open-profile.png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -244,7 +180,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="remote-gui.qrc">:/new/remote-gui/save-profile.png</pixmap>
+     <pixmap resource="remote-gui.qrc">:/new/remote-gui/images/save-profile.png</pixmap>
     </property>
    </widget>
    <widget class="QTabWidget" name="tabWidget">
@@ -283,7 +219,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="remote-gui.qrc">:/new/remote-gui/new-profile.png</pixmap>
+     <pixmap resource="remote-gui.qrc">:/new/remote-gui/images/new-profile.png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
@@ -291,7 +227,7 @@
      <rect>
       <x>590</x>
       <y>20</y>
-      <width>151</width>
+      <width>181</width>
       <height>51</height>
      </rect>
     </property>
@@ -335,7 +271,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="remote-gui.qrc">:/new/remote-gui/upload-profile.png</pixmap>
+     <pixmap resource="remote-gui.qrc">:/new/remote-gui/images/upload-profile.png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_9">
@@ -351,7 +287,63 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="remote-gui.qrc">:/new/remote-gui/download-profile.png</pixmap>
+     <pixmap resource="remote-gui.qrc">:/new/remote-gui/images/download-profile.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>20</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addbutton">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="remote-gui.qrc">
+      <normaloff>:/new/remote-gui/images/add-profile.png</normaloff>:/new/remote-gui/images/add-profile.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delbutton">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>20</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="remote-gui.qrc">
+      <normaloff>:/new/remote-gui/images/del-profile.png</normaloff>:/new/remote-gui/images/del-profile.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
     </property>
    </widget>
   </widget>

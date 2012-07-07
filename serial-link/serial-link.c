@@ -84,14 +84,15 @@ int main(int argc, char **argv)
 				if(mavlink_parse_char(MAVLINK_COMM_0,buf[i], &msg, &status))
 				{
                                         printf("\nReceived packet: SYS: %d, COMP: %d, LEN: %d, MSG ID: %d\n", msg.sysid, msg.compid, msg.len, msg.msgid);
+					
+					timeout = 0;
 					switch(msg.msgid)
 					{
 						case MAVLINK_MSG_ID_HEARTBEAT:
-							timeout = 0;
 							printf("Heartbeat Message Recieved\n");
 							break;
 						default:
-							continue;
+							break;
 					}
 				}
 			}
