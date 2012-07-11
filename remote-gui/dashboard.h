@@ -2,6 +2,7 @@
 #define DASHBOARD_H
 
 #include <QMainWindow>
+#include <QFileDialog>
 #include "ui_dashboard.h"
 #include "ui_addprofile.h"
 
@@ -21,6 +22,7 @@ public slots:
     void addprofile ();
     void addprofileok ();
     void delprofile ();
+    void openprofile ();
     void newprofile ();
     void saveprofile ();
     void uploadprofile ();
