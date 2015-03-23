@@ -46,10 +46,10 @@ int main(int argc, char **argv)
 		strcpy(SERIALDEVICE, argv[1]);
 
 	fd = open(SERIALDEVICE, O_RDWR | O_NOCTTY | O_NONBLOCK);
-	if (fd <0) 
+	if (fd <0)
 	{
-		perror(SERIALDEVICE); 
-		exit(-1); 
+		perror(SERIALDEVICE);
+		exit(-1);
 	}
 
 	tcgetattr(fd,&oldtio);
@@ -77,14 +77,14 @@ int main(int argc, char **argv)
 		printf("Heartbeat Message Sent\n");
 
 		res = read(fd,buf,255);
-		if(res > 0) 
+		if (res > 0)
 		{
 			for(i = 0; i < res; i++)
 			{
-				if(mavlink_parse_char(MAVLINK_COMM_0,buf[i], &msg, &status))
+				if (mavlink_parse_char(MAVLINK_COMM_0,buf[i], &msg, &status))
 				{
                                         printf("\nReceived packet: SYS: %d, COMP: %d, LEN: %d, MSG ID: %d\n", msg.sysid, msg.compid, msg.len, msg.msgid);
-					
+
 					timeout = 0;
 					switch(msg.msgid)
 					{
